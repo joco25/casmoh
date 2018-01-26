@@ -25,9 +25,16 @@ io.on('connection',(socket)=>{
         if (!isRealString(params.name) || !isRealString(params.room)){
             return callback('Name and room name are required')
         }
+        
+        if(users.existingNames(params.name).length > 0){
+            return callback('Name already taken!!')
+        }
+
+        console.log(users.existingNames(params.name))
+
         socket.join(params.room);
         users.removeUser(socket.id)
-        users.addUser(socket.id, params.name, params.room)
+        users.addUser(socket.id, params.name, params.room.toLowerCase())
 
         //socket.leave('smallTalk')
         //io.emit-> io.to('businessTalk').emit()

@@ -25,7 +25,14 @@ socket.on('connect', function () {
             alert(err)
             window.location.href = '/'
         }else{
-            console.log('No error')
+            console.log('No error',params)
+            //Update the room
+            var template = $('#room-template').html();
+            var html = Mustache.render(template, {
+                room: params.room
+            });
+
+            $('#room-name').append(html);
         }
     })
 })

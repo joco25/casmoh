@@ -18,6 +18,12 @@ h3 {
     font-size: 1.5rem;
 }
 
+h5 {
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.1rem;
+}
+
 button {
     border: none;
     background: #265f82;
@@ -110,6 +116,12 @@ button:disabled {
 }
 
 .chat__sidebar h3 {
+    color: #e6eaee;
+    margin: 10px 20px;
+    text-align: left;
+}
+
+.chat__sidebar h5 {
     color: #e6eaee;
     margin: 10px 20px;
     text-align: left;

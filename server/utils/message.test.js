@@ -7,7 +7,7 @@ describe('generateMessage',()=>{
         let text = 'This is how we row';
         let res = generateMessage(from,text)
             expect(res).toInclude({from})
-            expect(res).toInclude({text})
+     
             expect(res.createdAt).toBeA('number')
     })
 })

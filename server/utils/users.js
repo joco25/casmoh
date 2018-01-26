@@ -34,6 +34,15 @@ class Users{
 
         return namesArray;
     }
+
+    existingNames(name){
+        let existingName = this.users.filter((user) => {
+           return  user.name.toLowerCase() === name.toLowerCase()
+        })
+
+        return existingName;
+    }
+    
     
 }
 
